@@ -1,36 +1,69 @@
 # In name of Allah
 
+Nilva React Code Challange
+
 ## Introduction
-We need a simple app to get a set of countries, find mutual neighbors & print the result for user. You can either develop the whole app at once, or go through our step by step guide to learn & develop simultaneously.
 
-## Steps
+we want you to design and implement a simple single web page app which will use the blow `public API` to request and fetch some data and do the specified tasks below.
 
-
-### Recommendation
-It is recommended to use below technologies:
-- redux
-- axios
-- 
-
-## Expectations
-
-So What does matter to us?
-- a clean structure of codebase & components
-- clean code practices
-- ability to layout page correctly
-- well designed UI
-- good understanding of states
-- finally, ability to learn
+```bash
+https://travelbriefing.org/api
+```
 
 ## Tasks
 
-1. Fork this repository
-2. Estimate the develop & send it to us
-3. Break and specify your tasks in project management tool (append the image of your tasks to readme file of your project)
-4. Learn & Develop
-5. Push your code to your repository
-6. Explain the roadmap of your development in readme of repository (also append the image of your specified tasks on part 3 to file)
-6. Send us a pull request, we will review and get back to you
-7. Enjoy
+- fetch a list of `10 random, unique` countries from the list of countries in the endpoint below. e.g. Canada, USA, Japan, etc.
 
-**Finally** don't be afraid to ask anything from us.
+```bash
+https://travelbriefing.org/countries.json
+```
+
+each country will have its own endpoint. e.g.:
+
+```bash
+https://travelbriefing.org/Netherlands?format=json
+```
+
+this response will be an object with a key of `neighbors`
+
+check the 10 countries to see which countries are `mutual neighbors`. this means these countries have each other in their `neighbors` field. e.g.:
+
+```json
+{name: 'Canada', neighbors: [{name: 'USA', ...},...]}
+
+{name: 'USA', neighbors: [{name: 'Canada',...},...]}
+```
+
+are mutual neighbors.
+
+- feel free to display the mutual neighbors in any way that makes sense to you. Note: if you find that `Canada` and `USA` are mutual neighbors, you should only display the pair once.
+- if none of the chosen countries had no mutual neighbors, simply display a message in a desired way and sat that `there are no mutual neighbors in the chosen countries` then please display the selected countries as well.
+- `fork` this repository, develop your code, and push it to your forked branch. when you think your code is ready, simply just raise a `pull request` here.
+
+## Expectations
+
+- a clean structure of codebase and components
+- clean and readable code practice
+- ability to layout pages correctly
+- responsive and simple design
+- well and optimized API calls
+
+## Notes
+
+- please write your app in ReactJS, no backend necessary.
+- please `do not` use any libraries to select the random countries or find neighbors.
+- feel free to use any boilerplate to quickly set up the app. eg: `CRA`
+- don't hesitate to take your time and review others written codes, and by the way contact us for more information and help, we're reachable on scheduled time.
+- it would be better to write a simple and brief `README.md` file.
+
+## Suggested techs
+
+take your time and make a review on these techs. we would gladly provide you with the required information and useful documents about each one of `ordered preferred` techs listed below.
+
+- main framework: [ReactJS](https://reactjs.org/), [NextJS](https://nextjs.org/), [Ionic](https://ionicframework.com/), ...
+- style framework: [SASS](https://sass-lang.com/), [LESS](https://lesscss.org/), [Tailwind](https://tailwindcss.com/), ...
+- item and icons packages: [Material-Ui](https://material-ui.com/), [bootstrap](https://getbootstrap.com/), ...
+- data fetching: [axios](https://github.com/axios/axios), fetch
+- state management: [Redux toolkit](https://redux-toolkit.js.org/), [React-Redux](https://redux.js.org/), [useContext](https://reactjs.org/docs/hooks-reference.html#usecontext), ...
+
+
