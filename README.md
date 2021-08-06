@@ -28,7 +28,7 @@ this response will be an object with a key of `neighbors`
 
 check the 10 countries to see which countries are `mutual neighbors`. this means these countries have each other in their `neighbors` field. e.g.:
 
-```json
+```bash
 {name: 'Canada', neighbors: [{name: 'USA', ...},...]}
 
 {name: 'USA', neighbors: [{name: 'Canada',...},...]}
