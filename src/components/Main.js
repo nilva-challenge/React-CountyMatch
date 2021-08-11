@@ -1,7 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { randomSelection } from "../functions/functions_array"
-import {MatchCountry} from "./MatchCountry";
+import { MatchCountry } from "./MatchCountry";
+import { PageLoader } from './PageLoader'
+import Image from './../assets/images/world.png'
+import './../assets/sass/style.scss'
 
 
 export const Main = () => {
@@ -30,12 +33,17 @@ export const Main = () => {
 
 
 	return (
-		<div className="">
-			{send 
-				?<MatchCountry country={country} />
-				:null
-			}				
-		</div>
+		<>
+			<div className="pic">
+				<img src={Image} />
+			</div>
+			<div className={send ? "" : "loader"}>
+				{send
+					? <MatchCountry country={country} />
+					: <PageLoader />
+				}
+			</div>
+		</>
 	);
 }
 
