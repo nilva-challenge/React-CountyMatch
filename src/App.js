@@ -5,6 +5,8 @@ import getNRandomItem from "./utils/GetNRandomItem"
 import FindDuplicatesBetweenTwoArray from "./utils/FindDuplicatesBetweenTwoArray"
 import CreateIsoData from "./utils/CreateIsoData"
 import Map from "./components/map/Map"
+import GuidBox from "./components/guidBox/GuidBox"
+import Loading from "./components/loading/Loading"
 
 export default function App() {
   const [data, setData] = useState({
@@ -12,6 +14,7 @@ export default function App() {
     isoName: {},
     neighborCountries: [],
   })
+  const [loading, setLoading] = useState(true)
 
   useEffect(() => {
     axios
@@ -23,8 +26,7 @@ export default function App() {
         const contries = []
         const isos = []
         const commonCountry = []
-        console.log("DDDDD", result)
-        result.forEach((contry) => {
+        result.forEach((contry, i) => {
           axios.get(contry.url).then((resp) => {
             //find duplicate contry
             const dup = FindDuplicatesBetweenTwoArray(resp.data, result)
@@ -40,6 +42,9 @@ export default function App() {
               isoName: CreateIsoData(isos),
               contriesList: contries,
             })
+          })
+          .finally(() => {
+            if(i === 9) setLoading(false)
           })
         })
       })
@@ -65,13 +70,14 @@ export default function App() {
     })
   }, [data])
 
-  return (
+  return !loading ? (
     <main>
       <Box>
         {Object.keys(data.contriesList).length === 10 && (
           <Map contriesSelected={data.isoName} />
         )}
+        <GuidBox cards={data.neighborCountries} />
       </Box>
     </main>
-  )
+  ) : (<Loading />)
 }

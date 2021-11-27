@@ -2,22 +2,17 @@ import React from "react"
 import { VectorMap } from "react-jvectormap"
 import "./Map.css"
 
-const handleClick = (e, countryCode) => {
-  console.log(countryCode)
-}
-
 const Map = ({ contriesSelected }) => {
   return (
     <div>
       <VectorMap
         map={"world_mill"}
-        backgroundColor="transparent" //change it to ocean blue: #0077be
+        backgroundColor="transparent"
         zoomOnScroll={false}
         containerStyle={{
           width: "100%",
-          height: "100vh",
+          height: "80vh",
         }}
-        onRegionClick={handleClick} //gets the country code
         containerClassName="map"
         regionStyle={{
           initial: {
@@ -32,7 +27,7 @@ const Map = ({ contriesSelected }) => {
             cursor: "pointer",
           },
           selected: {
-            fill: "#2938bc", //color for the clicked country
+            fill: "#2938bc",
           },
           selectedHover: {},
         }}
@@ -40,8 +35,8 @@ const Map = ({ contriesSelected }) => {
         series={{
           regions: [
             {
-              values: contriesSelected, //this is your data
-              scale: ["#146804", "#2938bc"], //your color game's here
+              values: contriesSelected,
+              scale: ["#146804", "#2938bc"],
               normalizeFunction: "polynomial",
             },
           ],
