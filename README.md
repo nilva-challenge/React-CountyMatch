@@ -1,69 +1,49 @@
-# In name of Allah
+# React-CountyMatch
 
-Nilva React Code Challange
+![preview](./preview.png)
 
-## Introduction
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-we want you to design and implement a simple single web page app which will use the blow `public API` to request and fetch some data and do the specified tasks below.
+## Available Scripts
 
-```bash
-https://travelbriefing.org/api
-```
+In the project directory, you can run:
 
-## Tasks
+### `npm start`
+or
+### `yarn start`
 
-- fetch a list of `10 random, unique` countries from the list of countries in the endpoint below. e.g. Canada, USA, Japan, etc.
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-```bash
-https://travelbriefing.org/countries.json
-```
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-each country will have its own endpoint. e.g.:
+## Learn More
 
-```bash
-https://travelbriefing.org/Netherlands?format=json
-```
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-this response will be an object with a key of `neighbors`
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-check the 10 countries to see which countries are `mutual neighbors`. this means these countries have each other in their `neighbors` field. e.g.:
+### Code Splitting
 
-```bash
-{name: 'Canada', neighbors: [{name: 'USA', ...},...]}
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-{name: 'USA', neighbors: [{name: 'Canada',...},...]}
-```
+### Analyzing the Bundle Size
 
-are mutual neighbors.
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
 
-- feel free to display the mutual neighbors in any way that makes sense to you. Note: if you find that `Canada` and `USA` are mutual neighbors, you should only display the pair once.
-- if none of the chosen countries had no mutual neighbors, simply display a message in a desired way and sat that `there are no mutual neighbors in the chosen countries` then please display the selected countries as well.
-- `fork` this repository, develop your code, and push it to your forked branch. when you think your code is ready, simply just raise a `pull request` here.
+### Making a Progressive Web App
 
-## Expectations
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
 
-- a clean structure of codebase and components
-- clean and readable code practice
-- ability to layout pages correctly
-- responsive and simple design
-- well and optimized API calls
+### Advanced Configuration
 
-## Notes
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
 
-- please write your app in ReactJS, no backend necessary.
-- please `do not` use any libraries to select the random countries or find neighbors.
-- feel free to use any boilerplate to quickly set up the app. eg: `CRA`
-- don't hesitate to take your time and review others written codes, and by the way contact us for more information and help, we're reachable on scheduled time.
-- it would be better to write a simple and brief `README.md` file.
+### Deployment
 
-## Suggested techs
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
 
-take your time and make a review on these techs. we would gladly provide you with the required information and useful documents about each one of `ordered preferred` techs listed below.
+### `npm run build` fails to minify
 
-- main framework: [ReactJS](https://reactjs.org/), [NextJS](https://nextjs.org/), [Ionic](https://ionicframework.com/), ...
-- style framework: [SASS](https://sass-lang.com/), [LESS](https://lesscss.org/), [Tailwind](https://tailwindcss.com/), ...
-- item and icons packages: [Material-Ui](https://material-ui.com/), [bootstrap](https://getbootstrap.com/), ...
-- data fetching: [axios](https://github.com/axios/axios), fetch
-- state management: [Redux toolkit](https://redux-toolkit.js.org/), [React-Redux](https://redux.js.org/), [useContext](https://reactjs.org/docs/hooks-reference.html#usecontext), ...
-
-
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
