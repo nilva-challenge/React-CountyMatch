@@ -15,6 +15,7 @@ export const useFetch = (url) => {
         const { data } = await axios.get(url, {
           cancelToken: cancelToken.token,
         });
+        // find random country
         const randomData = data.sort((a, b) => 0.5 - Math.random()).slice(-10);
         const customObj = async () => {
           let filteredObj = [];
@@ -27,6 +28,7 @@ export const useFetch = (url) => {
             });
 
             if (filteredObj.length === 10) {
+              // set state with desired data
               setData(filteredObj);
               setIsFeching(false);
             }

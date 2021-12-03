@@ -4,33 +4,36 @@ import { useFetch } from './hooks/useFetch';
 
 function App() {
   const [borderCt, setBorderCt] = useState([]);
+
+  // fetching data from custom hook
   const {
     data: countries,
     isFeching,
     error,
   } = useFetch('https://travelbriefing.org/countries.json');
-  // console.log(countries);
 
+  // finding matched countries
   useEffect(() => {
     if (countries) {
       let matualCount = [];
-      const findIt = (para) => {
+      const findIt = (...para) => {
         console.log(para);
-        countries.forEach((el) => {
-          if (el.neighbors.includes(para.name)) {
-            console.log(para.name, el.name);
-            if (
-              !matualCount.includes([el.name, para.name].join(' and ')) &&
-              !matualCount.includes([para.name, el.name].join(' and '))
-            ) {
-              matualCount.push([para.name, el.name].join(' and '));
+        para.forEach((par) => {
+          countries.forEach((el) => {
+            if (el.neighbors.includes(par.name)) {
+              console.log(par.name, el.name);
+              if (
+                !matualCount.includes([el.name, par.name].join(' and ')) &&
+                !matualCount.includes([par.name, el.name].join(' and '))
+              ) {
+                matualCount.push([par.name, el.name].join(' and '));
+              }
             }
-          }
+          });
         });
       };
 
       findIt(...countries);
-      console.log(matualCount);
       setBorderCt(matualCount);
     }
   }, [countries]);
@@ -43,8 +46,12 @@ function App() {
         {countries && <CountryList countries={countries} />}
       </div>
       <div className="app__matual">
-        {/* <h1>hi show me</h1> */}
-        {borderCt && borderCt.map((el) => <h2 key={el}>{el}</h2>)}
+        <h2>Matual Country</h2>
+        {borderCt.length > 0 ? (
+          borderCt.map((el) => <h2 key={el}>{el}</h2>)
+        ) : (
+          <h2>No Matual Country.</h2>
+        )}
       </div>
     </div>
   );

@@ -62,8 +62,9 @@ img {
 
 .app .app__matual {
   height: 30vh;
+  overflow-y: auto;
   text-align: center;
-  color: #222;
+  color: #fff;
   background-color: #3d5063;
 }
 

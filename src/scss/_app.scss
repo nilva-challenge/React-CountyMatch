@@ -25,8 +25,9 @@
 
   .app__matual {
     height: 30vh;
+    overflow-y: auto;
     text-align: center;
-    color: $text-color-dark;
+    color: $text-color-white;
     background-color: #3d5063;
     h2 {
       margin: 2rem 0 1rem 0;
