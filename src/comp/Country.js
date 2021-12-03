@@ -1,5 +1,3 @@
-import { useFetch } from '../hooks/useFetch';
-
 function Country({ country }) {
   return (
     <div>

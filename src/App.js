@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 import CountryList from './comp/CountryList';
 import { useFetch } from './hooks/useFetch';
 
@@ -37,11 +36,16 @@ function App() {
   }, [countries]);
   return (
     <div className="app">
-      <h1>hi there</h1>
-      {isFeching && <h2>Loading ...</h2>}
-      {error && <h2>{error}</h2>}
-      {countries && <CountryList countries={countries} />}
-      {borderCt && borderCt.map((el) => <h2 key={el}>{el}</h2>)}
+      <h1 className="app__title">County Match</h1>
+      <div className="app__country">
+        {isFeching && <h2>Loading ...</h2>}
+        {error && <h2>{error}</h2>}
+        {countries && <CountryList countries={countries} />}
+      </div>
+      <div className="app__matual">
+        {/* <h1>hi show me</h1> */}
+        {borderCt && borderCt.map((el) => <h2 key={el}>{el}</h2>)}
+      </div>
     </div>
   );
 }

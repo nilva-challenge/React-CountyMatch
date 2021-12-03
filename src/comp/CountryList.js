@@ -1,12 +1,16 @@
-import Country from './Country';
-
+// import circle from '../assets/circle.svg';
 function CountryList({ countries }) {
   return (
-    <div>
+    <>
       {countries.map((country) => (
-        <Country key={country.name} country={country} />
+        <>
+          {/* <img src={circle} alt="circle" /> */}
+          <h1 key={country.name} className="countrylist__name">
+            {country.name}
+          </h1>
+        </>
       ))}
-    </div>
+    </>
   );
 }
 
