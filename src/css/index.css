@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;300;400;600;700;800;900&family=Open+Sans:wght@300;400;600;700;800&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Nunito Sans;
+  background-color: #fff;
+  color: #fff;
+}
+
+.app {
+  height: 100vh;
+  overflow-y: hidden;
+  position: relative;
+  background-color: #222;
+}
+
+.app button {
+  position: absolute;
+  left: 0;
+  top: 200px;
+  color: #fff;
+  background-color: #374b64;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+
+.app button:hover {
+  color: #374b64;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  .app button {
+    display: none;
+  }
+}
+
+.app .app__title {
+  background: #222;
+  padding: 2rem;
+  background-image: linear-gradient(12deg, #000000 0%, #1e3042 64%);
+  text-align: center;
+}
+
+.app .app__country {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  background-color: #222;
+  background-image: linear-gradient(125deg, #000000 0%, #1e3042 64%);
+  height: 55vh;
+  border-bottom: 2px solid #fff;
+}
+
+@media screen and (max-width: 768px) {
+  .app .app__country {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-y: auto;
+  }
+}
+
+.app .app__matual {
+  height: 35vh;
+  overflow-y: auto;
+  text-align: center;
+  padding-bottom: 4rem;
+  color: #fff;
+  background-color: #374b64;
+}
+
+.app .app__matual h2 {
+  font-weight: 300;
+  margin: 2rem 0 1rem 0;
+}
+
+.app .app__matual .app__matual-title {
+  letter-spacing: 1.5rem;
+  font-weight: 600;
+}
+
+.app .app__matual .app__matual-nomatch {
+  font-weight: 100;
+}
+
+.app .app__matual .app__matual-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1240px) {
+  .app .app__matual .app__matual-wrapper {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app .app__matual .app__matual-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.app .app__matual .app__matual-country {
+  background-color: #fff;
+  color: #000000;
+  border-radius: 8px;
+  width: 400px;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  -webkit-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.app .app__matual .app__matual-country:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media screen and (max-width: 480px) {
+  .app .app__matual .app__matual-country {
+    width: 250px;
+  }
+}
+
+.countrylist__name {
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-align: end;
+  margin: 0 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 1050px) {
+  .countrylist__name {
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .countrylist__name {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    font-weight: 300;
+  }
+}
+
+.countrylist__name:hover {
+  border: none;
+}
+/*# sourceMappingURL=index.css.map */
