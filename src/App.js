@@ -36,7 +36,7 @@ function App() {
       setBorderCt(matualCount);
     }
   }, [countries]);
-  console.log(countries);
+
   return (
     <div className="app">
       <button onClick={() => setReset(!reset)}>Restart</button>
