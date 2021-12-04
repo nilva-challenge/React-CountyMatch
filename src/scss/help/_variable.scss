@@ -1,4 +1,22 @@
+// color
+$background-black: #000000;
 $background-color: #fff;
+$background-not-matual-country: #1e3042;
+$background-matual-country: #374b64;
 $background-app-color: #222;
 $text-color-white: #fff;
 $text-color-dark: #222;
+
+// weight
+$text-super-light: 100;
+$text-light: 300;
+$text-medium: 400;
+$text-bold: 600;
+$text-super-bold: 800;
+
+// queries
+
+$breakpoint-l: 1240px;
+$breakpoint-m: 1050px;
+$breakpoint-s: 768px;
+$breakpoint-ss: 480px;

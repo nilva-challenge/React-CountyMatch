@@ -56,20 +56,91 @@ img {
           align-items: flex-end;
   background-color: #222;
   background-image: linear-gradient(125deg, #000000 0%, #1e3042 64%);
-  height: 60vh;
+  height: 55vh;
   border-bottom: 2px solid #fff;
 }
 
+@media screen and (max-width: 768px) {
+  .app .app__country {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-y: auto;
+  }
+}
+
 .app .app__matual {
-  height: 30vh;
+  height: 35vh;
   overflow-y: auto;
   text-align: center;
   color: #fff;
-  background-color: #3d5063;
+  background-color: #374b64;
 }
 
 .app .app__matual h2 {
+  font-weight: 300;
   margin: 2rem 0 1rem 0;
+}
+
+.app .app__matual .app__matual-title {
+  letter-spacing: 1.5rem;
+  font-weight: 600;
+}
+
+.app .app__matual .app__matual-nomatch {
+  font-weight: 100;
+}
+
+.app .app__matual .app__matual-wrapper {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media screen and (max-width: 1240px) {
+  .app .app__matual .app__matual-wrapper {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .app .app__matual .app__matual-wrapper {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.app .app__matual .app__matual-country {
+  background-color: white;
+  color: #000000;
+  border-radius: 8px;
+  width: 400px;
+  padding: 0.5rem;
+  margin: 1rem auto;
+  -webkit-box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 5px rgba(0, 0, 0, 0.2);
+}
+
+.app .app__matual .app__matual-country:hover {
+  -webkit-transform: translateY(10px);
+          transform: translateY(10px);
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+@media screen and (max-width: 480px) {
+  .app .app__matual .app__matual-country {
+    width: 250px;
+  }
 }
 
 .countrylist__name {
@@ -79,6 +150,25 @@ img {
   margin: 0 2rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #fff;
+}
+
+@media screen and (max-width: 1050px) {
+  .countrylist__name {
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .countrylist__name {
+    -webkit-writing-mode: horizontal-tb;
+        -ms-writing-mode: lr-tb;
+            writing-mode: horizontal-tb;
+    margin: 0 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    font-weight: 300;
+  }
 }
 
 .countrylist__name:hover {

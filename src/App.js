@@ -17,11 +17,9 @@ function App() {
     if (countries) {
       let matualCount = [];
       const findIt = (...para) => {
-        console.log(para);
         para.forEach((par) => {
           countries.forEach((el) => {
             if (el.neighbors.includes(par.name)) {
-              console.log(par.name, el.name);
               if (
                 !matualCount.includes([el.name, par.name].join(' and ')) &&
                 !matualCount.includes([par.name, el.name].join(' and '))
@@ -46,11 +44,17 @@ function App() {
         {countries && <CountryList countries={countries} />}
       </div>
       <div className="app__matual">
-        <h2>Matual Country</h2>
+        <h2 className="app__matual-title">Matual Country</h2>
         {borderCt.length > 0 ? (
-          borderCt.map((el) => <h2 key={el}>{el}</h2>)
+          <div className="app__matual-wrapper">
+            {borderCt.map((el) => (
+              <h2 className="app__matual-country" key={el}>
+                {el}.
+              </h2>
+            ))}
+          </div>
         ) : (
-          <h2>No Matual Country.</h2>
+          <h2 className="app__matual-nomatch">No Matual Country.</h2>
         )}
       </div>
     </div>
