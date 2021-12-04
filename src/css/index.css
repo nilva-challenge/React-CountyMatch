@@ -13,28 +13,36 @@ body {
   color: #fff;
 }
 
-ul {
-  padding: 0;
-  list-style-type: none;
-}
-
-a {
-  text-decoration: none;
-}
-
-hr {
-  border: 0;
-  border-top: 1px dotted #efefef;
-}
-
-img {
-  max-width: 100%;
-}
-
 .app {
   height: 100vh;
   overflow-y: hidden;
+  position: relative;
   background-color: #222;
+}
+
+.app button {
+  position: absolute;
+  left: 0;
+  top: 200px;
+  color: #fff;
+  background-color: #374b64;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 2px;
+}
+
+.app button:hover {
+  color: #374b64;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+  .app button {
+    display: none;
+  }
 }
 
 .app .app__title {
@@ -77,6 +85,7 @@ img {
   height: 35vh;
   overflow-y: auto;
   text-align: center;
+  padding-bottom: 4rem;
   color: #fff;
   background-color: #374b64;
 }
@@ -120,7 +129,7 @@ img {
 }
 
 .app .app__matual .app__matual-country {
-  background-color: white;
+  background-color: #fff;
   color: #000000;
   border-radius: 8px;
   width: 400px;
@@ -144,9 +153,10 @@ img {
 }
 
 .countrylist__name {
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-align: end;
   margin: 0 2rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid #fff;

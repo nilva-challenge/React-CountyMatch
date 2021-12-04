@@ -1,10 +1,35 @@
 .app {
   height: 100vh;
   overflow-y: hidden;
+  position: relative;
+  button {
+    position: absolute;
+    left: 0;
+    top: 200px;
+    color: $text-color-white;
+    background-color: $background-matual-country;
+    font-family: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    &:hover {
+      color: $background-matual-country;
+      background-color: $text-color-white;
+    }
+    @media screen and (max-width: $breakpoint-ss) {
+      display: none;
+    }
+  }
   .app__title {
-    background: #222;
+    background: $text-color-dark;
     padding: 2rem;
-    background-image: linear-gradient(12deg, #000000 0%, #1e3042 64%);
+    background-image: linear-gradient(
+      12deg,
+      $background-black 0%,
+      $background-not-matual-country 64%
+    );
     text-align: center;
   }
 
@@ -33,6 +58,7 @@
     height: 35vh;
     overflow-y: auto;
     text-align: center;
+    padding-bottom: 4rem;
     color: $text-color-white;
     background-color: $background-matual-country;
     h2 {
@@ -59,7 +85,7 @@
       }
     }
     .app__matual-country {
-      background-color: white;
+      background-color: $background-color;
       color: $background-black;
       border-radius: 8px;
       width: 400px;

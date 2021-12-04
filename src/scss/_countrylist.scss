@@ -1,6 +1,6 @@
 .countrylist__name {
-  //   text-orientation: sideways;
-  writing-mode: vertical-lr;
+  writing-mode: vertical-rl;
+  text-align: end;
   margin: 0 2rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid $text-color-white;

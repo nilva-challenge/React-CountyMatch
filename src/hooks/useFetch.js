@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useEffect, useState } from 'react';
 
-export const useFetch = (url) => {
+export const useFetch = (url, reset) => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(false);
   const [isFeching, setIsFeching] = useState(false);
@@ -15,7 +15,7 @@ export const useFetch = (url) => {
         const { data } = await axios.get(url, {
           cancelToken: cancelToken.token,
         });
-        // find random country
+        // find 10 random countries
         const randomData = data.sort((a, b) => 0.5 - Math.random()).slice(-10);
         const customObj = async () => {
           let filteredObj = [];
@@ -45,7 +45,7 @@ export const useFetch = (url) => {
     return () => {
       cancelToken.cancel();
     };
-  }, [url]);
+  }, [url, reset]);
 
   return { data, error, isFeching };
 };
